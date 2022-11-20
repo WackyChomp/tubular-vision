@@ -15,6 +15,7 @@ import FaceRetouchingNaturalIcon from '@mui/icons-material/FaceRetouchingNatural
 export const logo = 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Color_icon_azure.png';
 
 export const categories = [
+  { name: 'Home', icon: <HomeIcon />, },
   { name: 'Coding', icon: <CodeIcon />, },
   { name: 'Comedy', icon: <TheaterComedyIcon />, },
   { name: 'Crypto', icon: <DeveloperModeIcon />, },
@@ -25,7 +26,6 @@ export const categories = [
   { name: 'Live', icon: <LiveTvIcon />, },
   { name: 'Movie', icon: <OndemandVideoIcon />, },
   { name: 'Music', icon: <MusicNoteIcon /> },
-  { name: 'New', icon: <HomeIcon />, },
   { name: 'Podcast', icon: <GraphicEqIcon />, },
   { name: 'Sport', icon: <FitnessCenterIcon />, },
 ];
