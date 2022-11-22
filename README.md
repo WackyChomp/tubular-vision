@@ -10,6 +10,7 @@ YouTube API</p>
 - [React library](https://reactjs.org/docs/getting-started.html)
 - [Material UI](https://mui.com/material-ui/getting-started/overview/)
 - [Rapid API](https://rapidapi.com/)
+- [YouTube API](https://rapidapi.com/ytdlfree/api/youtube-v31/)
 
 <hr>
 
