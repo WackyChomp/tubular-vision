@@ -2,9 +2,9 @@ import React from 'react';
 import { Stack } from '@mui/material';
 import { categories } from './utils/constants';
 
-const selectedCategory = 'Home';
+//const selectedCategory = 'Home';
 
-const Sidebar = () => {
+const Categories = ( selectedCategory, setSelectedCategory) => {
   return (
     <Stack
     direction='row'
@@ -19,7 +19,8 @@ const Sidebar = () => {
           background: category.name === selectedCategory && '#1965d4', 
           color: 'white'
         }}
-        key={ category.name}
+        key={ category.name }
+        onClick={ () => setSelectedCategory(category.name) }
         >
           <span style={{ color: category.name === selectedCategory ? 'white' : 'green', marginRight: '15px'}}>{category.icon}</span>
           <span style={{ opacity: category.name === selectedCategory ? '1' : '0.4 '}}>{category.name}</span>
@@ -29,4 +30,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Categories
