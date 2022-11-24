@@ -4,7 +4,7 @@ import { categories } from './utils/constants';
 
 //const selectedCategory = 'Home';
 
-const Categories = ( selectedCategory, setSelectedCategory) => {
+const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <Stack
     direction='row'
@@ -30,4 +30,4 @@ const Categories = ( selectedCategory, setSelectedCategory) => {
   )
 }
 
-export default Categories
+export default Sidebar

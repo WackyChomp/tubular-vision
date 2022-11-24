@@ -6,11 +6,12 @@ import { fetchYoutubeAPI } from './utils/fetchYoutubeAPI';
 
 const Feed = () => {
 
-  const [selectedCategory, setSelectedCategory] = useState('New');
+  const [selectedCategory, setSelectedCategory] = useState('Dynamic');
+
 
   useEffect (() => {
     fetchYoutubeAPI(`search?part=snippet&q=${selectedCategory}`)
-  }, [selectedCategory])
+  }, [selectedCategory]);
 
 
   return (
@@ -38,10 +39,9 @@ const Feed = () => {
         variant='h4' fontWeight='bold' mb={2}
         sx={{ color:'white' }}
         >
-          Homepage <span style={{ color:'yellow' }}>Videos</span>
+          {selectedCategory} <span style={{ color:'yellow' }}>Videos</span>
         </Typography>
 
-        <Videos video={[]}/>
       </Box>
     </Stack>
   )
