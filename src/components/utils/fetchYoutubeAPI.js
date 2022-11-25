@@ -1,8 +1,6 @@
 import axios from "axios";
 
-//const axios = require("axios");
-
-const BASE_URL = 'https://youtube-v31.p.rapidapi.com/search';
+const BASE_URL = 'https://youtube-v31.p.rapidapi.com';      //removed '/' to fix -_-
 
 const options = {
   url: BASE_URL,
@@ -16,7 +14,7 @@ const options = {
 
 
 export const fetchYoutubeAPI = async (url) => {
-  const { data } = await axios.get(`${BASE_URL}/$(url)`, options)
+  const { data } = await axios.get(`${BASE_URL}/${url}`, options);
 
-  return data
-}
+  return data;
+};
