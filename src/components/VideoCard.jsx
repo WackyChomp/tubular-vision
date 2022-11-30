@@ -10,7 +10,7 @@ const VideoCard = ({ video:{ id:{videoId}, snippet } }) => {    // destructured
   //console.log(videoId, snippet);
   
   return (
-    <Card>
+    <Card sx={{ width: {sm:'100%', md:'320px'}, boxShadow:'none', borderRadius:0 }}>
       {/* Thumbnail */}      
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia 
