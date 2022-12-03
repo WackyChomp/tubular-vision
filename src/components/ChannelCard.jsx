@@ -9,7 +9,14 @@ const ChannelCard = ({ channelDetail }) => {
     <Box
     sx={{
       boxShadow:'none',
+      backgroundColor:'white',
       borderRadius:'20px',
+      display:'flex',
+      justifyContent:'center',
+      alignItems:'center',
+      width:{ xs:'360px', md:'320px' },
+      height:'320px',
+      margin:'auto'
     }}
     >
       <Link to={`channel/${channelDetail?.id?.channelId}`}>
