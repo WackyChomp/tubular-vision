@@ -15,12 +15,13 @@ const ChannelDetail = () => {
   useEffect(()=> {
     fetchYoutubeAPI(`channels?part="snippet&id=${id}`).then((data) => setChannelDetail(data?.items[0]))
     fetchYoutubeAPI(`search?channelId=${id}&part=snippet&order=date`).then((data) => setVideos(data?.items[0]))
-  }, [id])
+  }, [id]);
 
   
   return (
     //<div>{id}</div>,
     <Box minHeight="95vh">
+      <Box>
       <div
         style={{
           background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(64,102,143,1) 50%, rgba(0,212,255,1) 100%)",
@@ -28,9 +29,19 @@ const ChannelDetail = () => {
           height: "300px"
         }}
       />
-      <ChannelCard channelDetail={channelDetail} />
-    </Box>
-  )
-}
+      <ChannelCard 
+        channelDetail={channelDetail} 
+        marginTop="-100px"      //optional property from ChannelCard
+      />
 
-export default ChannelDetail
+      <Box display="flex" p="2">
+        <Box sx={{ mr: { sm:'100px' }}}>
+
+        </Box>
+      </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default ChannelDetail;

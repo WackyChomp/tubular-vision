@@ -17,7 +17,7 @@ const Videos = ({ videos }) => {
       ))};
 
     </Stack>
-  )
+  );
 }
 
-export default Videos
+export default Videos;
