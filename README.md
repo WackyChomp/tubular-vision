@@ -27,3 +27,6 @@ npm start
 ## Images / Progression
 <p><u>November 27, 2022</u> - WIP colors, intended for distinction</p>
 <img src="./src/components/utils/img/1-render-thumbnails-(11-2022).png"/>
+
+<p><u>December 13, 2022</u> - Display videos on specific channel id</p>
+<img src="./src/components/utils/img/2-display-channel- videos-(12-2022)"/>

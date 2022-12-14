@@ -13,8 +13,13 @@ const ChannelDetail = () => {
   console.log(channelDetail, videos)
 
   useEffect(()=> {
-    fetchYoutubeAPI(`channels?part="snippet&id=${id}`).then((data) => setChannelDetail(data?.items[0]))
-    fetchYoutubeAPI(`search?channelId=${id}&part=snippet&order=date`).then((data) => setVideos(data?.items[0]))
+    const fetchResults = async () =>{
+      const data = await fetchYoutubeAPI(`channels?part="snippet&id=${id}`);
+        setChannelDetail(data?.items[0]);
+      const videosData = await fetchYoutubeAPI(`search?channelId=${id}&part=snippet&order=date`);
+        setVideos(videosData?.items);
+    };
+    fetchResults();
   }, [id]);
 
   
@@ -36,7 +41,7 @@ const ChannelDetail = () => {
 
       <Box display="flex" p="2">
         <Box sx={{ mr: { sm:'100px' }}}>
-
+          <Videos videos={videos} />
         </Box>
       </Box>
       </Box>
