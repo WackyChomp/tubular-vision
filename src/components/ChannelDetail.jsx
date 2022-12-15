@@ -36,7 +36,7 @@ const ChannelDetail = () => {
       />
       <ChannelCard 
         channelDetail={channelDetail} 
-        marginTop="-100px"      //optional property from ChannelCard
+        marginTop="-120px"      //optional property from ChannelCard
       />
 
       <Box display="flex" p="2">

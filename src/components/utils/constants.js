@@ -7,6 +7,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import PetsIcon from '@mui/icons-material/Pets';
 import SchoolIcon from '@mui/icons-material/School';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
@@ -28,6 +29,7 @@ export const categories = [
   { name: 'Music', icon: <MusicNoteIcon /> },
   { name: 'Podcast', icon: <GraphicEqIcon />, },
   { name: 'Sport', icon: <FitnessCenterIcon />, },
+  { name: 'The Dodo', icon: <PetsIcon />, },
 ];
 
 export const demoThumbnailUrl = 'https://media.istockphoto.com/id/1192837450/vector/under-construction-site-banner-sign-vector-black-and-yellow-diagonal-stripes-under.jpg?s=612x612&w=0&k=20&c=UJl_uhpxStWki_A-rII3fG_Kjp1-KKcjhHNpkCOvYwA=';
