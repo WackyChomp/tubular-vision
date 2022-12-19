@@ -1,17 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import { Videos } from './allComponents';
+import { useParams } from 'react-router-dom';
 import { fetchYoutubeAPI } from './utils/fetchYoutubeAPI';
 
 
 const SearchFeed = () => {
 
-  const [selectedCategory, setSelectedCategory] = useState('Dynamic');
   const [videos, setVideos] = useState([]);
+  const { searchTerm } = useParams();
 
   useEffect (() => {
-    fetchYoutubeAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => setVideos(data.items))
-  }, [selectedCategory]);
+    fetchYoutubeAPI(`search?part=snippet&q=${searchTerm}`).then((data) => setVideos(data.items))
+  }, [searchTerm]);
 
 
   return (
@@ -23,7 +24,7 @@ const SearchFeed = () => {
       variant='h4' fontWeight='bold' mb={2}
       sx={{ color:'cyan' }}
       >
-        {selectedCategory} <span style={{ color:'yellow' }}>Videos :)</span>
+        Search Results for: <span style={{ color:'yellow' }}>{searchTerm}</span> videos
       </Typography>
 
       <Videos videos={ videos } />
