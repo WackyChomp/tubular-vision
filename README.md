@@ -32,3 +32,8 @@ npm start
 
 <p><u>December 13, 2022</u> - Display videos on specific channel id</p>
 <img src="./src/components/utils/img/2-display-channel-videos-(12-2022).png"/>
+
+<br>
+
+<p><u>December 19, 2022</u> - Display content through search bar</p>
+<img src="./src/components/utils/img/3-searchbar-results-(12-19-2022).png"/>

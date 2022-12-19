@@ -8,7 +8,7 @@ import { fetchYoutubeAPI } from './utils/fetchYoutubeAPI';
 const SearchFeed = () => {
 
   const [videos, setVideos] = useState([]);
-  const { searchTerm } = useParams();
+  const { searchTerm } = useParams();       /* useState from SearchBar component */
 
   useEffect (() => {
     fetchYoutubeAPI(`search?part=snippet&q=${searchTerm}`).then((data) => setVideos(data.items))
