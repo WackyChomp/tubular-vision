@@ -2,11 +2,14 @@ import React from 'react';
 import { Box, Stack } from '@mui/material';
 import { VideoCard, ChannelCard } from './allComponents';
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos, direction }) => {
+
+  if(!videos?.length) return 'Videos Loading......'
+
   console.log(videos);        // displays 50 elements based on fetchYouTubeAPI.js
   
   return (
-    <Stack direction='row' flexWrap='wrap' justifyContent='start' gap={2}>
+    <Stack direction={ direction || 'row'} flexWrap='wrap' justifyContent='start' gap={2}>
 
       {/* Each category will display both channel and video */}
       {videos.map((item, idx) =>(

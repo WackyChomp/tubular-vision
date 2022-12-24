@@ -20,8 +20,7 @@ const VideoDetail = () => {
   }, [id]);
 
 
-  if(!videoDetail?.snippet) return 'Loading......'      /* sometimes snippet doesn't have all the data b/c it hasn't loaded yet */
-  //if(!videos?.snippet) return 'Loading......'
+  if(!videoDetail?.snippet) return 'Main Video Details Loading......'      /* sometimes snippet doesn't have all the data b/c it hasn't loaded yet */
   
   // Destructuring
   const { snippet: {title, channelId, channelTitle}, statistics: {viewCount, likeCount} } = videoDetail;
@@ -57,10 +56,10 @@ const VideoDetail = () => {
             </Stack>
           </Box>
         </Box>
-      </Stack>
         <Box px={2} py={{ md:1, xs:3 }} justifyContent='center' alignItems='center'>
-          <Videos videos={videos} />
+          <Videos videos={videos} direction='column' />
         </Box>
+      </Stack>
     </Box>
   )
 }

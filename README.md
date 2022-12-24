@@ -37,3 +37,8 @@ npm start
 
 <p><u>December 19, 2022</u> - Display content through search bar</p>
 <img src="./src/components/utils/img/3-searchbar-results-(12-19-2022).png"/>
+
+<br>
+
+<p><u>December 23, 2022</u> - Display Video Detail and Video components</p>
+<img src="./src/components/utils/img/4-Displaying-Videos-(12-23-2022).png"/>
